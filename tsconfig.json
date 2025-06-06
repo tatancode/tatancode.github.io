@@ -1,5 +1,6 @@
 {
   "files": [],
+  "include" : ["env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/route"],
   "references": [
     {
       "path": "./tsconfig.node.json"
@@ -7,5 +8,5 @@
     {
       "path": "./tsconfig.app.json"
     }
-  ]
+  ],
 }
