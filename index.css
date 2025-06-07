@@ -9,11 +9,82 @@ body{
 }
 
 .container{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    min-height: 300vh;
 }
 
-h1{
-    font-size: 24px;
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.fade-text {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    animation: fadeOut linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 20%;
+}
+
+.appear-text{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeInOut linear forwards;
+    animation-timeline: scroll();
+    animation-range: 25% 60%;
+}
+
+.fade-p-1{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeInOut linear forwards;
+    animation-timeline: scroll();
+    animation-range: 50% 80%;
+}
+
+.fade-p-2{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn linear forwards;
+    animation-timeline: scroll();
+    animation-range: 70% 100%;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;} 
+    to {opacity: 0;}   
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    60% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+}
+
+.content {
+    padding: 2rem;
+    margin-top: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
