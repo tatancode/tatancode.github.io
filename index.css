@@ -59,9 +59,20 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    animation: fadeInOut linear forwards;
+    animation-timeline: scroll();
+    animation-range: 70% 90%;
+}
+
+.fade-p-3{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
     animation: fadeIn linear forwards;
     animation-timeline: scroll();
-    animation-range: 70% 100%;
+    animation-range: 90% 100%;
 }
 
 @keyframes fadeOut {
@@ -77,7 +88,7 @@ body{
 
 @keyframes fadeIn {
     0% { opacity: 0; }
-    33% { opacity: 1; }
+    100% { opacity: 1; }
 }
 
 .content {
@@ -87,4 +98,21 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.particle-trigger {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
 }
